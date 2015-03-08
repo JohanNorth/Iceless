@@ -4,7 +4,17 @@
   margin: 0px;
  
   text-decoration: none;
+    
   
+}
+
+body{
+    
+    background: red;
+
+    background: url(IB1.png) no-repeat center center fixed;
+    background-size: cover;   
+
 }
 
 .wrapper{
