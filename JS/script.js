@@ -53,8 +53,8 @@ var maps= [map1, map2, map3];
 
 function start() {
     
-    document.getElementById("meny").style.display = "none";
-    
+    document.getElementById("frontside2").style.display = "none";
+
     c = document.getElementById("myCanvas");
     ctx = c.getContext("2d");
     playerImg = document.getElementById("player");

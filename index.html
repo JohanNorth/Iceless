@@ -1,19 +1,37 @@
+<!DOCTYPE>
 <html> 
     <head>
         <script src="JS/script.js"></script>
         <link href="CSS/main.css" rel="stylesheet" type="text/css">
     </head>
     <body onkeydown="keyDown(event)" onkeyup="keyUp(event)">
-
         <div class="wrapper">
 
-            <div id="meny">
-                <center>
-                    
-                    <img onclick="start()" src="img/Play_Button.png">
-                   
-                </center>   
+
+
+            <div id="frontside1">
+
+                <img class="logo" src="img/Logo.png">
+
+
             </div>
+            <div id="frontside2">
+
+                <img class="Play" onclick="start()" src="img/Play_Button.png">
+
+                <div id=middle>
+                
+                <img class="Left" onclick="start()" src="img/Play_Button.png">
+                
+                <img class="Right" onclick="start()" src="img/Play_Button.png">
+                    
+                </div>    
+                
+                <img class="Play" onclick="start()" src="img/Play_Button.png">
+            </div>
+
+
+            <div id="meny"></div>
 
             <div id="nextLevel">
 
@@ -24,7 +42,7 @@
             </div>    
 
             <center>
-                <canvas id="myCanvas" height="800" width="960">
+                <canvas id="myCanvas">
                     </center>   
 
                 </canvas>
@@ -34,7 +52,11 @@
             <img src="img/C2%2040x40.png" id="player">
             <img src="img/grid.png" id="wall">
 
-        </div>   
+
+
+
+
+        </div>
     </body>
 
 

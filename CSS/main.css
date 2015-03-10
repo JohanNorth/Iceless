@@ -10,28 +10,105 @@
 
 body{
     
-    background: red;
+    background: #bbe7ef;
 
-    background: url(IB1.png) no-repeat center center fixed;
+    /*---background: url(IB1.png) no-repeat center center fixed;---*/
     background-size: cover;   
 
 }
 
 .wrapper{
     
-    width: 1200px;
+    width: 90%;
     height: auto;
+    
     
     margin-left: auto;
     margin-right: auto;
     
-
-    background: #cacaf8;
+    background: #bbe7ef;
     
+}
+
+/*--- Website ---*/
+
+#frontside1{
+    
+    width: 60%;
+    height: 30%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    background: #bbe7ef;
     
     
 }
 
+.logo{
+    
+    display: block;
+    
+    width: auto;
+    height: 300px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#frontside2{
+    
+    width: 80%;
+    height: 65%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    background: #bbe7ef;
+    
+}
+
+#middle{
+    
+    width: 98%;
+    height: 38%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    background: #bbe7ef;
+}
+
+.Play{
+
+    display: block;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+
+.Left{
+
+    display: block;
+    
+    margin-right: auto;
+    float: left;
+    
+}
+
+.Right{
+
+    display: block;
+    
+    margin-left: auto;
+    float: right;
+   
+}
+
+/*--- Spel ---*/
 #player {
     
     display: none;
@@ -43,21 +120,26 @@ body{
     display: none;
 }
 
-#meny{
+/*--#meny{
     
     width: 800px;
-    height: 200px;
-    
+    height: 300px;
+     
     margin-left: auto;
     margin-right: auto;
     
     background: red;
     
     
-}
+}--*/
 
 #myCanvas{
-        
+         
+    /*--width: 960px;
+    height: 800px;--*/
+    
+    width: 1120px; /*28+40*/
+    height: 1066px; /*26+40*/
     
 }
 
@@ -71,8 +153,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     
-    background: blue;
-    
+    background: blue;   
     
 }
 
