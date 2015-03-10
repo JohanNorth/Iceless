@@ -30,7 +30,7 @@ body{
     
 }
 
-/*--- Website ---*/
+/*--- Website Front ---*/
 
 #frontside1{
     
@@ -41,7 +41,6 @@ body{
     margin-right: auto;
     
     background: #bbe7ef;
-    
     
 }
 
@@ -78,6 +77,7 @@ body{
     margin-right: auto;
     
     background: #bbe7ef;
+
 }
 
 .Play{
@@ -107,8 +107,21 @@ body{
     float: right;
    
 }
+/*--- Website Game ---*/
 
-/*--- Spel ---*/
+#gamebox{
+    
+    display: block;
+    
+    width: 100%;
+    height: auto;
+    
+    background: #bbe7ef;
+    
+    
+}
+
+/*--- Game ---*/
 #player {
     
     display: none;
