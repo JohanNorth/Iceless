@@ -327,8 +327,9 @@ function paintLevel() {
 function nextScreen(){
     
     document.getElementById("myCanvas").style.display = "none"; 
-    document.getElementById("nextLevel").style.display = "block";
     
+    document.getElementById("YouWon").style.display = "block";
+    document.getElementById("nextLevel").style.display = "block";
     
 }
 
@@ -337,7 +338,9 @@ function levelUPD(){
     
     LEVEL++;
     
+    document.getElementById("YouWon").style.display = "none";
     document.getElementById("nextLevel").style.display = "none";
+    
     document.getElementById("myCanvas").style.display = "block"; 
     
     

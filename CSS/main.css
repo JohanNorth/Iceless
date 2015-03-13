@@ -120,6 +120,21 @@ body{
     transition: 500ms;
    
 }
+
+/*--- How to play ---*/
+
+.box{
+    
+    width: 160px;
+    height: 160px;
+    
+    background: red;
+    
+    
+}
+
+/*--- About ---*/
+
 /*--- Website Game ---*/
 
 #gamebox{
@@ -134,7 +149,6 @@ body{
     
 }
 
-/*--- Game ---*/
 #player {
     
     display: none;
@@ -146,20 +160,29 @@ body{
     display: none;
 }
 
-/*--#meny{
+#myCanvas{
     
-    width: 800px;
-    height: 300px;
-     
+}
+
+#YouWon{
+    
+    display: none;
+    
+    width: 50%;
+    height: 20%;
+    
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
     
     background: red;
     
-    
-}--*/
+}
 
-#myCanvas{
+.LC{
+    
+    width: 100%;
+    height: 100%;
+    
     
 }
 
@@ -167,13 +190,11 @@ body{
     
     display: none;
     
-    width: 800px;
-    height: 300px;
+    width: 80%;
+    height: 30%;
     
     margin-left: auto;
-    margin-right: auto;
-    
-    background: blue;   
+    margin-right: auto; 
     
 }
 
