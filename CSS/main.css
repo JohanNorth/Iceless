@@ -84,8 +84,17 @@ body{
 
     display: block;
     
+    transform: scale(1.0);
     margin-left: auto;
     margin-right: auto;
+    transition: 500ms;
+    
+    
+}
+
+.play:hover, .Left:hover, .Right:hover{
+    
+    transform: scale(1.1);
     
     
 }
@@ -94,8 +103,10 @@ body{
 
     display: block;
     
+    transform: scale(1.0);
     margin-right: auto;
     float: left;
+    transition: 500ms;
     
 }
 
@@ -103,8 +114,10 @@ body{
 
     display: block;
     
+    transform: scale(1.0);
     margin-left: auto;
     float: right;
+    transition: 500ms;
    
 }
 /*--- Website Game ---*/
