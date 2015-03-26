@@ -160,6 +160,29 @@ body{
     display: none;
 }
 
+#floor {
+    
+    display: none;
+}
+
+#block {
+    
+    display: none;
+    
+}
+
+#box {
+    
+    display: none;
+    
+}
+
+#win {
+    
+    display: none;
+    
+}
+
 #myCanvas{
     
 }

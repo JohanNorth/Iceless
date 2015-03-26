@@ -16,6 +16,13 @@ var WINNING_TILE = 5;
 
 var LEVEL = 0;
 
+var BGSOUND = new Howl({urls:['Sounds/ToD.mp3'],
+                       
+loop: true,
+volume: 0.5,
+                       
+}).play();
+
 
 var map1 =[ [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
             [1,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
@@ -84,7 +91,11 @@ function start() {
     ctx = c.getContext("2d");
     playerImg = document.getElementById("player");
     wallImg = document.getElementById("wall")
-
+    floorImg = document.getElementById("floor");
+    blockImg = document.getElementById("block");
+    boxImg = document.getElementById("box");
+    winImg = document.getElementById("win");
+    
     window.setInterval(update, 20);
 
 }
@@ -263,25 +274,33 @@ function paintLevel() {
                 //Paint Wall    
                 case WALL_TILE:
                     
-                    ctx.fillStyle = "rgb(0,0,0)";
-                    ctx.fillRect(i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+                    //ctx.fillStyle = "rgb(0,0,0)";
+                    //ctx.fillRect(i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
                 
+                    ctx.drawImage(wallImg, i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+                    
+                    
                     break;
                     
                 //Paint Floor    
                 case FLOOR_TILE:
                     
+                    /*
                     ctx.fillStyle = "rgb(200,0,0)";
-                    ctx.fillRect(i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+                    ctx.fillRect(i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);*/
                     
+                    ctx.drawImage(floorImg, i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
                     
                     break;
                     
                 //Paint Player    
                 case PLAYER_TILE:
                     
-                    ctx.fillStyle = "rgb(200,0,0)";
-                    ctx.fillRect(i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+                    //ctx.fillStyle = "rgb(200,0,0)";
+                    //ctx.fillRect(i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+                    
+                    ctx.drawImage(floorImg, i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+                    
                     
                     ctx.drawImage(playerImg, i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
                     
@@ -290,31 +309,45 @@ function paintLevel() {
                 //Paint Box    
                 case BOX_TILE:
                     
-                    ctx.fillStyle = "rgb(16, 201, 65)";
-                    ctx.fillRect(i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+                    //ctx.fillStyle = "rgb(16, 201, 65)";
+                    //ctx.fillRect(i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+                    
+                    ctx.drawImage(floorImg, i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+                    
+                    ctx.drawImage(blockImg, i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
                     
                     break; 
                     
                 //Paint Dummy Box  
                 case DUMMY_TILE:
                     
-                    ctx.fillStyle = "rgb(126, 114, 19)";
-                    ctx.fillRect(i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+                    //ctx.fillStyle = "rgb(126, 114, 19)";
+                    //ctx.fillRect(i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+                    
+                    ctx.drawImage(floorImg, i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+                    
+                    ctx.drawImage(boxImg, i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+                    
                     
                     break;    
                     
                 //Paint Winning Tile   
                 case WINNING_TILE:
                     
-                    ctx.fillStyle = "rgb(20, 137, 51)";
-                    ctx.fillRect(i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+                    //ctx.fillStyle = "rgb(20, 137, 51)";
+                    //ctx.fillRect(i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+                    
+                    ctx.drawImage(floorImg, i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+                    
+                    ctx.drawImage(winImg, i*TILE_SIZE, j*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+                    
                     
                     break;
             }
             
             
             //Draws Grid
-            ctx.drawImage(wallImg,i*TILE_SIZE,j*TILE_SIZE,TILE_SIZE,TILE_SIZE);
+           // ctx.drawImage(wallImg,i*TILE_SIZE,j*TILE_SIZE,TILE_SIZE,TILE_SIZE); //
             
          
 
